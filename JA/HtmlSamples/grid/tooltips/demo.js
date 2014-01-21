@@ -8,7 +8,7 @@ $(function () {
                     { headerText: "名字", key: "LastName", dataType: "string", width: "10%" },
                     { headerText: "役職", key: "Title", dataType: "string", width: "17%" },
                     { headerText: "生年月日", key: "BirthDate", dataType: "date", width: "8%" },
-                    { headerText: "Notes", key: "Notes", dataType: "string", width: "55%", template: "<p class='tooltip-grid-notes'> ${Notes} </p>" }
+                    { headerText: "メモ", key: "Notes", dataType: "string", width: "55%", template: "<p class='tooltip-grid-notes'> ${Notes} </p>" }
                 ],
                 dataSource: northwind,
                 responseDataKey: "results",
