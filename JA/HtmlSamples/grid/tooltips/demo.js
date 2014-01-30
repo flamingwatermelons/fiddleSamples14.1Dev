@@ -19,7 +19,7 @@ $(function () {
                            { columnKey: "FirstName", allowTooltips: false },
                            { columnKey: "LastName", allowTooltips: false }
                         ],
-                        style: "tooltip",
+                        style: Modernizr.touch ? "popover" : "tooltip",
                         visibility: "always"
                     },
                     {
