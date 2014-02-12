@@ -20,7 +20,7 @@ $(function () {
             function setWedgeIndex(_index) {
                 if (lastCliked == null) return;
                 if (isNaN(_index)) {
-                    alert("$$(errIntegerValue)");
+                    alert("整数値を指定してください。");
                     return;
                 }
                 $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeIndex", _index);
@@ -29,7 +29,7 @@ $(function () {
             function setWedgeSpan(_span) {
                 if (lastCliked == null) return;
                 if (isNaN(_span) || _span < -1) {
-                    alert("$$(errIntegerValue1More)");
+                    alert("0 より大きい整数値を指定してください。");
                     return;
                 }
                 $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeSpan", _span);
@@ -41,7 +41,7 @@ $(function () {
                 height: "450px"
             });
 
-            $("#htmlEditor").igHtmlEditor("setContent", "$$(ContentText)", "html");
+            $("#htmlEditor").igHtmlEditor("setContent", "xamRadialMenu コントロールは、中央ボタンの周りに項目を表示するコンテキスト メニューです。項目を円形に配置することで項目をすばやく選択できます。各項目は中央に対して均等に配置されます。xamRadialMenu は、数値、色値、または操作を実行する項目タイプをサポートします。サブ項目もサポートします。<br/>デフォルトで、xamRadialMenu の中央ボタンのみを表示します。ユーザーが中央ボタンをクリックすると、xamRadialMenu が開き、ルート レベルのメニュー項目を表示します。ルート レベル項目が表示されたときに中央ボタンをクリックすると、xamRadialMenu が閉じます。サブ項目に移動するには、外部リングの矢印をクリックし対応するサブ項目グループを表示します。サブ項目グループが表示されたときに中央ボタンをクリックすると、以前のレベルの項目を表示します。", "html");
 
             // create the radial menu
             $("#radialMenu").igRadialMenu({
@@ -51,7 +51,7 @@ $(function () {
                 [
                     {
                         name: "button1",
-                        header: "$$(btnBold)",
+                        header: "太字",
                         iconUri: "http://jp.dev.igniteui.local/14-1/images/samples/radial-menu/Bold.png",
                         click: function (evt, ui) {
                             lastCliked = evt.item.name;
@@ -60,7 +60,7 @@ $(function () {
                     },
                     {
                         name: "button2",
-                        header: "$$(btnItalic)",
+                        header: "イタリック",
                         iconUri: "http://jp.dev.igniteui.local/14-1/images/samples/radial-menu/Italic.png",
                         click: function (evt, ui) {
                             lastCliked = evt.item.name;
