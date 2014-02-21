@@ -66,7 +66,7 @@ $(function () {
                             lastCliked = evt.item.name;
                             toggleItalic();
                         }
-                    },
+                    }
                 ]
             });
 

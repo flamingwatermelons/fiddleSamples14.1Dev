@@ -37,8 +37,7 @@ $(function () {
                                 ticks: "8pt,9pt,10pt,12pt,14pt,16pt,18pt",
                                 value: 8,
                                 valueChanged: function (evt, ui) {
-                                    alert("valueChanged - " + evt.newValue);
-                                    //setFontSize(evt.newValue);
+                                    setFontSize(evt.newValue);
                                 }
                             }
                         ]
