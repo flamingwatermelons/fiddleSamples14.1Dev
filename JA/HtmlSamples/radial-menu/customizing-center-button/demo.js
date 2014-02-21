@@ -15,6 +15,11 @@ $(function () {
                 }
             }
 
+            function setFontSize(_size) {
+                if (_size == null) return;
+                $("#htmlEditor").igHtmlEditor("executeAction", "fontsize", _size);
+            }
+
             // create the html editor
             $("#htmlEditor").igHtmlEditor({
                 width: "98%",
@@ -41,6 +46,24 @@ $(function () {
                         iconUri: "http://jp.dev.igniteui.local/14-1/images/samples/radial-menu/Italic.png",
                         click: function () { toggleItalic(); }
                     },
+                    {
+                        type: "numericitem",
+                        header: "Font Size",
+                        iconUri: "http://jp.dev.igniteui.local/14-1/images/samples/radial-menu/Size.png",
+                        value: "8",
+                        items:
+                        [
+                            {
+                                name: "gauge1",
+                                type: "numericgauge",
+                                ticks: "8pt,9pt,10pt,12pt,14pt,16pt,18pt",
+                                value: 8,
+                                valueChanged: function (evt, ui) {
+                                    setFontSize(evt.newValue);
+                                }
+                            }
+                        ]
+                    }
                 ]
             });
         });
