@@ -1,1 +1,2 @@
 .tooltip-grid-notes { white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+        #sampleContainer { overflow: visible !important; }
