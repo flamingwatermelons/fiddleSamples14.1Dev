@@ -7,9 +7,8 @@ $(function () {
                     { headerText: "id", key: "id", dataType: "number", hidden: true},
                     { headerText: "Time", key: "Time", dataType: "string", width: 80 },
                     { headerText: "Wind Speed (mph)", key: "WindSpeed", dataType: "number", width: 160 },
-                    { headerText: "Wind Speed Gauge (mph)", key: "gauge", width: 370 }
+                    { headerText: "Wind Speed Gauge (mph)", key: "gauge", width: 370, template: "<div class='linear-gauge' ></div>" }
                 ],
-                rowTemplate: "<tr><td>${id}</td><td>${Time}</td><td>${WindSpeed}</td><td><div class='linear-gauge' ></div></td></tr>",
                 dataSource: data,
                 autoGenerateColumns: false,
                 rowsRendered: function (evt, ui) {
