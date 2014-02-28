@@ -26,7 +26,7 @@ function getSelectionCoords() {
 
             return {
                 x: x,
-                y: y + 100
+                y: y + 118
             };
         }
 
@@ -35,16 +35,12 @@ function getSelectionCoords() {
             if (window.frames[0].document.getSelection) {
                 if (sel && sel.getRangeAt && sel.rangeCount) {
                     range = sel.getRangeAt(0);
-                    document.designMode = "on";
                     sel.removeAllRanges();
                     sel.addRange(range);
                 }
             }
             if (window.frames[0].document.queryCommandState) {
                 isState = window.frames[0].document.queryCommandState(state);
-            }
-            if (document.designMode == "on") {
-                document.designMode = "off";
             }
             return isState;
         }
@@ -149,6 +145,11 @@ function getSelectionCoords() {
                         position: 'absolute'
                     });
 
+                    mouseMoveCoord = {
+                        x: ev.pageX,
+                        y: ev.pageY
+                    };
+
                     if (selectionIs(userSelection, "bold")) {
                         $bold.igToolbarButton("activate");
                     }
@@ -161,33 +162,49 @@ function getSelectionCoords() {
                         $underline.igToolbarButton("activate");
                     }
 
-                    $toolbarHolder.fadeIn();
+                    $iframe.contents().find("body").on("mousemove", function (ev) {
+                        if (userSelection.toString() !== "") {
+                            if (mouseMoveCoord &&
+                                ((Math.abs(mouseMoveCoord.x - ev.pageX) > 50) ||
+                                (Math.abs(mouseMoveCoord.y - ev.pageY) > 50))) {
+                                
+                                $toolbarHolder.fadeOut();
+                            } else {
+                                $toolbarHolder.fadeIn();
+                            }
+                        }
+                    });
 
-                    mouseMoveCoord = {
-                        x: ev.pageX,
-                        y: ev.pageY
-                    };
+                    $iframe.contents().find("body").on("keydown", function (ev) {
+                        if (ev.keyCode === 66 && ev.ctrlKey) {
+                            $bold.igToolbarButton("toggle");
+                        }
+
+                        if (ev.keyCode === 73 && ev.ctrlKey) {
+                            $italic.igToolbarButton("toggle");
+                        }
+
+                        if (ev.keyCode === 85 && ev.ctrlKey) {
+                            $underline.igToolbarButton("toggle");
+                        }
+                    });
+
+                    $toolbarHolder.fadeIn();                   
                 } else {
+                    $iframe.contents().find("body").off("mousemove");
+                    $iframe.contents().find("body").off("keydown")
+
                     $toolbarHolder.hide();
+                    if ($bold.igToolbarButton) {
+                        $bold.igToolbarButton("deactivate");
+                    }
 
-                    $bold.igToolbarButton("deactivate");
-                    $italic.igToolbarButton("deactivate");
-                    $underline.igToolbarButton("deactivate");
-                }
-            });
-            
-            $iframe.contents().find("body").on("mousemove", function (ev) {
-                var userSelection = window.frames[0].document.getSelection();
+                    if ($italic) {
+                        $italic.igToolbarButton("deactivate");
+                    }
 
-                var coord = getSelectionCoords();
-
-                if (userSelection.toString() !== "") {
-                    if (mouseMoveCoord &&
-                        ((Math.abs(mouseMoveCoord.x - ev.pageX) > 50) ||
-                        (Math.abs(mouseMoveCoord.y - ev.pageY) > 50))) {
-                        $toolbarHolder.fadeOut();
-                    } else {
-                        $toolbarHolder.fadeIn();
+                    if ($underline) {
+                        $underline.igToolbarButton("deactivate");
                     }
                 }
             });
