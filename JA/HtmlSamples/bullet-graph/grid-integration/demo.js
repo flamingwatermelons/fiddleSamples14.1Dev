@@ -15,9 +15,8 @@ var data = [
                     { headerText: "月", key: "month", dataType: "string", width: 100 },
                     { headerText: "消費 (TWh)", key: "consumption", dataType: "number", width: 130 },
                     { headerText: "生産 (TWh)", key: "production", dataType: "number", width: 120 },
-                    { headerText: "消費チャート (TWh)", key: "graph", width: 470 }
+                    { headerText: "消費チャート (TWh)", key: "graph", width: 470, template: "<div class='bullet-graph'></div>" }
                 ],
-                rowTemplate: "<tr><td>${id}</td><td>${month}</td><td>${consumption}</td><td>${production}</td><td><div class='bullet-graph'></div></td></tr>",
                 dataSource: data,
                 autoGenerateColumns: false,
                 rowsRendered: function (evt, ui) {
