@@ -1,0 +1,40 @@
+#figuresArea {
+            margin: 0px 0px 40px 0px;
+        }
+        #circle, #triangle, #rectangle, #square {
+            padding: 0px 0px 0px 60px;
+            
+        }
+        .manipulator-container {
+            border-bottom: 1px solid black;
+            padding: 0px 0px 5px 0px;
+            width: 300px;
+        }
+        .ui-igbutton.ui-state-hover {
+            border: 1px solid #999;
+            background-color: #CCC;
+            color: #666;
+        }
+
+        .ui-button {
+            width: 18px;
+            height: 18px;
+            padding: 3px;
+        }
+        .ui-igbutton .ui-igbutton-forecolor, .button-split {
+            background-image: url(http://jp.dev.igniteui.local/14-1/IgniteUI/css/themes/infragistics/images/ui-icons_888888_256x240.png);
+            background-size: 384px 370px;
+        }
+
+        #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle {
+            background-position: -123px -230px;
+        }
+        #color-picker-triangle .ui-igbutton .ui-igbutton-forecolor, #split-button-circle .button-triangle,
+         #split-button-triangle .button-triangle, #split-button-square .button-triangle{
+            background-position: -101px -10px;
+            background-image: url(http://jp.dev.igniteui.local/14-1/IgniteUI/css/structure/images/igGrid/filter-icons-333333.png);
+            background-size: 606px 32px;
+        }
+        #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square {
+            background-position: -148px -254px;
+        }
