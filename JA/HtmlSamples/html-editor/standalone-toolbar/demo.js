@@ -63,7 +63,7 @@ function getSelectionCoords() {
 
             $textToolbar.igToolbar({
                 "name": "textToolbar",
-                "displayName": "Toolbar text",
+                "displayName": "ツールバー テキスト",
                 "isExpanded": true,
                 "collapseButtonIcon": "ui-igbutton-collapse",
                 "expandButtonIcon": "ui-igbutton-expand",
