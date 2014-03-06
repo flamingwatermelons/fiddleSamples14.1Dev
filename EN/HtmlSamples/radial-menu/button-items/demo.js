@@ -47,7 +47,7 @@ $(function() {
             // create slider for the horizontal radial menu sizing
             $("#sliderWidth").slider({
                 min: 100,
-                max: 600,
+                max: 500,
                 value: 300,
                 step: 1,
                 slide: function (evt, ui) {
@@ -59,7 +59,7 @@ $(function() {
             // create slider for the vertical radial menu sizing
             $("#sliderHeight").slider({
                 min: 100,
-                max: 600,
+                max: 500,
                 value: 300,
                 step: 1,
                 slide: function (evt, ui) {
