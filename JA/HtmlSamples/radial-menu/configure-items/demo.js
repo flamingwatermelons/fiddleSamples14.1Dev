@@ -1,6 +1,25 @@
 $(function () {
-            var lastCliked = null;
+var lastCliked = null;
 
+        function setWedgeIndex(_index) {
+            if (lastCliked == null) return;
+            if (isNaN(_index)) {
+                alert("整数値を指定してください。");
+                return;
+            }
+            $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeIndex", _index);
+        }
+
+        function setWedgeSpan(_span) {
+            if (lastCliked == null) return;
+            if (isNaN(_span) || _span < -1) {
+                alert("0 より大きい整数値を指定してください。");
+                return;
+            }
+            $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeSpan", _span);
+        }
+
+        $(function () {
             function toggleBold() {
                 $("#htmlEditor").igHtmlEditor("executeAction", "bold");
                 var cbElement = document.getElementById("cbCloseOnClick");
@@ -15,24 +34,6 @@ $(function () {
                 if (cbElement && cbElement.checked) {
                     $("#radialMenu").igRadialMenu("option", "isOpen", false);
                 }
-            }
-
-            function setWedgeIndex(_index) {
-                if (lastCliked == null) return;
-                if (isNaN(_index)) {
-                    alert("整数値を指定してください。");
-                    return;
-                }
-                $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeIndex", _index);
-            }
-
-            function setWedgeSpan(_span) {
-                if (lastCliked == null) return;
-                if (isNaN(_span) || _span < -1) {
-                    alert("0 より大きい整数値を指定してください。");
-                    return;
-                }
-                $("#radialMenu").igRadialMenu("itemOption", lastCliked, "wedgeSpan", _span);
             }
 
             // create the html editor
@@ -94,3 +95,4 @@ $(function () {
                 }
             });
         });
+});
