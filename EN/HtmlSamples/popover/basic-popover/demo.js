@@ -32,7 +32,7 @@ $(function () {
                 contentTemplate: $( '#contactUs-template' ).html(),
                 headerTemplate: {
                     closeButton: true,
-                    title: "We're Social"
+                    title: "We're social"
                 },
                 showOn: "click"
             } );
@@ -57,8 +57,7 @@ $(function () {
         function contentFunction()
         {
             var imgTemplate = "<img class='map' alt='${value}' src='http://maps.google.com/maps/api/staticmap?zoom=10&size=250x250&maptype=terrain&sensor=false&center=${value}'>";
-            var element = $( this );
-            var data = [{ value: element[0].value }];
+            var data = [{ value: $( this )[0].value }];
             return $.ig.tmpl( imgTemplate, data );
         }
 });
