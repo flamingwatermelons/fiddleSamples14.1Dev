@@ -80,7 +80,7 @@ function getSelectionCoords() {
                             "action": "_isSelectedAction"
                         },
                         "boldButtonTooltip": {
-                            "value": "Bold",
+                            "value": "太字",
                             "action": "_tooltipAction"
                         },
                         "boldButtonIcon": {
@@ -97,7 +97,7 @@ function getSelectionCoords() {
                             "action": "_isSelectedAction"
                         },
                         "italicButtonTooltip": {
-                            "value": "Italic",
+                            "value": "イタリック",
                             "action": "_tooltipAction"
                         },
                         "italicButtonIcon": {
@@ -114,7 +114,7 @@ function getSelectionCoords() {
                             "action": "_isSelectedAction"
                         },
                         "underlineButtonTooltip": {
-                            "value": "Underline",
+                            "value": "下線",
                             "action": "_tooltipAction"
                         },
                         "underlineButtonIcon": {
