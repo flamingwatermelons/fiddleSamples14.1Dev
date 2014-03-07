@@ -42,7 +42,7 @@ $(function () {
                 position: "start",
                 headerTemplate: {
                     closeButton: true,
-                    title: 'Google Map を使用して市の位置を表示します。',
+                    title: 'Google Maps を使用して市の位置を表示します。',
                 },
                 closeOnBlur: false,
                 animationDuration: 0,
