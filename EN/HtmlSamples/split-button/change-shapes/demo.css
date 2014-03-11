@@ -10,11 +10,6 @@
             padding: 0px 0px 5px 0px;
             width: 300px;
         }
-        .ui-igbutton.ui-state-hover {
-            border: 1px solid #999;
-            background-color: #CCC;
-            color: #666;
-        }
 
         .ui-button {
             width: 18px;
@@ -26,15 +21,26 @@
             background-size: 384px 370px;
         }
 
-        #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle {
+        #color-picker-circle .ui-igbutton .ui-igbutton-forecolor, .button-circle.ui-icon {
             background-position: -123px -230px;
+            margin-top: -6px;
+            margin-left: -6px;
         }
         #color-picker-triangle .ui-igbutton .ui-igbutton-forecolor, #split-button-circle .button-triangle,
-         #split-button-triangle .button-triangle, #split-button-square .button-triangle{
+         #split-button-triangle .button-triangle, #split-button-square .button-triangle.ui-icon {
             background-position: -101px -10px;
             background-image: url(http://dev.igniteui.local/14-1/IgniteUI/css/structure/images/igGrid/filter-icons-333333.png);
             background-size: 606px 32px;
+            margin-top: -6px;
+            margin-left: -6px;
         }
-        #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square {
+        #color-picker-square .ui-igbutton .ui-igbutton-forecolor, .button-square.ui-icon {
             background-position: -148px -254px;
+            margin-top: -6px;
+            margin-left: -6px;
         }
+        
+    .ui-splitbutton .ui-igtoolbarbutton.ui-button {
+        margin: 0;
+        border: none!important; /* Needed to prevent various jquery ui interaction state scenarios */
+    }
