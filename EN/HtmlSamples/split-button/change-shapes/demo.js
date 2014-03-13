@@ -66,16 +66,16 @@ $(function () {
                 items: [{
                     name: "circle",
                     label: "circle",
-                    icon: "button-split button-circle"
+                    iconClass: "button-split button-circle"
                 }, {
                     name: "triangle",
                     label: "triangle",
-                    icon: "button-triangle"
+                    iconClass: "button-triangle"
                 },
                 {
                     name: "square",
                     label: "square",
-                    icon: "button-split button-square"
+                    iconClass: "button-split button-square"
                 }],
                 defaultItemName: "circle",
                 click: function (event, el) {
@@ -89,16 +89,16 @@ $(function () {
                 items: [{
                     name: "circle",
                     label: "circle",
-                    icon: "button-split button-circle"
+                    iconClass: "button-split button-circle"
                 }, {
                     name: "triangle",
                     label: "triangle",
-                    icon: "button-triangle"
+                    iconClass: "button-triangle"
                 },
                 {
                     name: "square",
                     label: "square",
-                    icon: "button-split button-square"
+                    iconClass: "button-split button-square"
                 }],
                 defaultItemName: "triangle",
                 click: function (event, el) {
@@ -112,16 +112,16 @@ $(function () {
                 items: [{
                     name: "circle",
                     label: "circle",
-                    icon: "button-split button-circle"
+                    iconClass: "button-split button-circle"
                 }, {
                     name: "triangle",
                     label: "triangle",
-                    icon: "button-triangle"
+                    iconClass: "button-triangle"
                 },
                 {
                     name: "square",
                     label: "square",
-                    icon: "button-split button-square"
+                    iconClass: "button-split button-square"
                 }],
                 defaultItemName: "square",
                 click: function (event, el) {
@@ -135,7 +135,7 @@ $(function () {
                 items: [{
                     name: "circlecolor",
                     label: "Circle Color",
-                    icon: "circle ui-igbutton-forecolor circle"
+                    iconClass: "circle ui-igbutton-forecolor circle"
                 }],
                 defaultItemName: "circlecolor",
                 defaultColor: "#205867",
@@ -151,7 +151,7 @@ $(function () {
                 items: [{
                     name: "trianglecolor",
                     label: "Triangle Color",
-                    icon: "ui-igbutton-forecolor"
+                    iconClass: "ui-igbutton-forecolor"
                 }],
                 defaultItemName: "trianglecolor",
                 defaultColor: "#5F497A",
@@ -167,7 +167,7 @@ $(function () {
                 items: [{
                     name: "squarecolor",
                     label: "Square Color",
-                    icon: "ui-igbutton-forecolor"
+                    iconClass: "ui-igbutton-forecolor"
                 }],
                 defaultItemName: "squarecolor",
                 defaultColor: "#E36C09",
