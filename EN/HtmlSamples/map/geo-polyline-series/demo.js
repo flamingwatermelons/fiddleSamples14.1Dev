@@ -196,8 +196,6 @@ $(function () {
                     height: "500px",
                     overviewPlusDetailPaneVisibility: "visible",
                     overviewPlusDetailPaneBackgroundImageUri: "http://dev.igniteui.local/14-1/images/samples/maps/world.png",
-                    verticalZoomable: true,
-                    horizontalZoomable: true,
                     windowRect: {
                         left: 0.180,
                         top: 0.3143,

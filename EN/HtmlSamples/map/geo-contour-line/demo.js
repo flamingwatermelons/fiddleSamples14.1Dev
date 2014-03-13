@@ -2,8 +2,6 @@ $(function () {
             $("#map").igMap({
                 width: "700px",
                 height: "500px",
-                verticalZoomable: true,
-                horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://dev.igniteui.local/14-1/images/samples/maps/world.png",
                 series: [{
