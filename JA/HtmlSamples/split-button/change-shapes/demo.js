@@ -78,6 +78,7 @@ $(function () {
                     iconClass: "button-split button-square"
                 }],
                 defaultItemName: "circle",
+                swapDefaultEnabled: true,
                 click: function (event, el) {
                     var elementToChangeId = event.target.firstChild.id.split("_")[0].split("-")[2];
                     var shape = event.target.firstChild.id.split("_")[1];
@@ -101,6 +102,7 @@ $(function () {
                     iconClass: "button-split button-square"
                 }],
                 defaultItemName: "triangle",
+                swapDefaultEnabled: true,
                 click: function (event, el) {
                     var elementToChangeId = event.target.firstChild.id.split("_")[0].split("-")[2];
                     var shape = event.target.firstChild.id.split("_")[1];
@@ -124,6 +126,7 @@ $(function () {
                     iconClass: "button-split button-square"
                 }],
                 defaultItemName: "square",
+                swapDefaultEnabled: true,
                 click: function (event, el) {
                     var elementToChangeId = event.target.firstChild.id.split("_")[0].split("-")[2];
                     var shape = event.target.firstChild.id.split("_")[1];
