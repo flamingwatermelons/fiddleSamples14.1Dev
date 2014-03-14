@@ -34,13 +34,12 @@ $(function () {
                             {
                                 name: "gauge1",
                                 type: "numericgauge",
-                                ticks: "7.5,10,12,13.5,18,24,36",
-                                value: 7.5,
+                                ticks: "10,12,18,24,36",
+                                value: 12,
+                                smallIncrement: 2,
                                 valueChanged: function (evt, ui) {
-                                    if (evt.newValue == 7.5) setFontSize(1);
-                                    else if (evt.newValue == 10) setFontSize(2);
+                                    if (evt.newValue == 10) setFontSize(2);
                                     else if (evt.newValue == 12) setFontSize(3);
-                                    else if (evt.newValue == 13.5) setFontSize(4);
                                     else if (evt.newValue == 18) setFontSize(5);
                                     else if (evt.newValue == 24) setFontSize(6);
                                     else if (evt.newValue == 36) setFontSize(7);
