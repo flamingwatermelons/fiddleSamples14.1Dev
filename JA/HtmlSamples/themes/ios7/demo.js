@@ -106,8 +106,10 @@ $(function () {
                 }
             });
 
-            // jQuery UI accordion
+            // jQuery UI controls
             $("#accordion").accordion();
             $("#tabs").tabs();
+            $("#slider").slider({ value: 10 });
+            $("#menu").menu();
             $("#datepickerui").datepicker();
         });
