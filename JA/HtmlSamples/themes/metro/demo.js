@@ -101,7 +101,7 @@ $(function () {
             //igDialog
             $("#dialog").igDialog({ height: 250, state: "closed" });
             $("#openDialog").igButton({
-                labelText: "Open Dialog", click: function () {
+                labelText: "ダイアログを開く", click: function () {
                     $("#dialog").igDialog("open");
                 }
             });
