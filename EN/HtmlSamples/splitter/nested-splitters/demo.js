@@ -14,8 +14,6 @@ $(function () {
                 width: "100%",
                 height: "500px",
                 crosshairVisibility: "visible",
-                verticalZoomable: true,
-                horizontalZoomable: true,
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://dev.igniteui.local/14-1/images/samples/splitter/world.png",
                 panModifier: "control",
