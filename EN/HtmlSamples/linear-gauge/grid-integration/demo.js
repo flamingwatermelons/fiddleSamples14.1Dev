@@ -1,4 +1,6 @@
 $(function () {
+var lg; 
+        $(function () {
 
             $("#grid").igGrid({
                 height: 500,
@@ -62,11 +64,23 @@ $(function () {
                                 readOnly: true
                             }
                         ],
-                        editCellEnded: function (evt, ui) {
-                            $(".linear-gauge").eq(ui.rowID).igLinearGauge("option", "value", ui.value);
-                        }
 
+                        editCellEnding: function (evt, ui) {
+                            if (ui.value != ui.oldValue) { 
+                                lg = $(".linear-gauge").eq(ui.rowID).detach();
+                            } 
+                        },
+                        editCellEnded: function (evt, ui) {
+                            if (ui.value != ui.oldValue) { 
+                                $(".linear-gauge").eq(ui.rowID).remove();
+                                ui.owner.element.find("tr[data-id=" + ui.rowID + "]>td:eq(2)").append(lg);
+                                if (ui.columnKey == "WindSpeed") {
+                                    $(".linear-gauge").eq(ui.rowID).igLinearGauge("option", "value", ui.value);
+                                }
+                            }
+                        }
                     }],
                 caption: "Raw Data from NOAA. Wind information from Los Angeles (07\\16\\2013) weather station."
             });
         });
+});
