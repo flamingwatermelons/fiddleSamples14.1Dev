@@ -8,7 +8,7 @@ $(function () {
                    { headerText: "Last Name", key: "LastName", dataType: "string" },
                    { headerText: "Birth Date", key: "BirthDate", dataType: "date" },
                    { headerText: "City", key: "City", dataType: "string" },
-                   { headerText: "Postal Code", key: "PostalCode", dataType: "number" }
+                   { headerText: "Country", key: "Country", dataType: "string" }
                 ],
                 autofitLastColumn: false,
                 autoGenerateColumns: false,
@@ -29,13 +29,13 @@ $(function () {
                     {
                         name: "GroupBy",
                         type: "local",
-                        persist: true,
+                        persist: true
                     },
                     {
                         name: "Selection",
                         mode: 'row',
                         multipleSelection: true,
-                        persist: true,
+                        persist: true
                     },
                     {
                         name: "RowSelectors",
