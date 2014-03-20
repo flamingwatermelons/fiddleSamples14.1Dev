@@ -42,7 +42,7 @@ $(function () {
                 position: "start",
                 headerTemplate: {
                     closeButton: true,
-                    title: 'Google Maps を使用して市の位置を表示します。',
+                    title: 'Google Maps を使用して市の位置を表示します。'
                 },
                 closeOnBlur: false,
                 animationDuration: 0,
@@ -50,10 +50,10 @@ $(function () {
                 maxWidth: 250,
                 contentTemplate: contentFunction,
                 selectors: "[title]",
-                containment: $( '#popoverTooltip' ),
                 showOn: "focus"
             } );
         } );
+
         function contentFunction()
         {
             var imgTemplate = "<img class='map' alt='${value}' src='http://maps.google.com/maps/api/staticmap?zoom=10&size=250x250&maptype=terrain&sensor=false&center=${value}'>";
