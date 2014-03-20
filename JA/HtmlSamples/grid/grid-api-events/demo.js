@@ -266,7 +266,6 @@ $(function () {
                         ]
                     },
                     {
-
                         name: "Selection",
                         mode: "row",
                         multipleSelection: true
