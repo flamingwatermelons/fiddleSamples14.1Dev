@@ -2,12 +2,6 @@
             margin-bottom: 10px;
         }
 
-        .ui-igbutton.ui-state-hover {
-            border: 1px solid #999;
-            background-color: #CCC;
-            color: #666;
-        }
-
         #text_collapseButton,
         #formatting_collapseButton {
             display: none;
