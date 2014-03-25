@@ -46,8 +46,7 @@ $(function () {
                                     longitude: selectedCity.Longitude,
                                     radius: 0.5
                                 });
-                                var zoom = $("#map").igMap("getZoomFromGeographic", geographic);
-                                $("#map").igMap("option", "windowRect", zoom);
+                                var zoom = $("#map").igMap("zoomToGeographic", geographic);
                             }
                         }]
                     });
@@ -57,8 +56,7 @@ $(function () {
                     longitude: node.data.Longitude,
                     radius: 23
                 });
-                var zoom = $("#map").igMap("getZoomFromGeographic", geographic);
-                $("#map").igMap("option", "windowRect", zoom);
+                var zoom = $("#map").igMap("zoomToGeographic", geographic);
                 $("#detailSplitter").igSplitter("expandAt", 1);
             });
 
