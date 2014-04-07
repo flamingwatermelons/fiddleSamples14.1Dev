@@ -33,7 +33,7 @@ $(function () {
                         markerType: "circle"
                     }, {
                         name: "series2",
-                        title: 'ニューヨーク市',
+                        title: 'ニューヨーク',
                         type: seriesType,
                         angleAxis: "angleAxis",
                         valueAxis: "radiusAxis",
