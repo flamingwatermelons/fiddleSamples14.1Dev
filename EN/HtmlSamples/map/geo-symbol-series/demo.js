@@ -44,9 +44,7 @@ $(function () {
                 overviewPlusDetailPaneVisibility: "visible",
                 overviewPlusDetailPaneBackgroundImageUri: "http://dev.igniteui.local/14-1/images/samples/maps/world.png",
                 backgroundContent: {
-                    type: "cloudMade",
-                    key: mapHelper.cloudmadeData(),
-                    parameter: 2
+                    type: "openStreet"
                 },
                 series: [{
                     type: "geographicSymbol",
